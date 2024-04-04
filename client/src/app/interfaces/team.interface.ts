@@ -3,4 +3,5 @@ export interface ITeam {
     name: string,
     deptId: string,
     description: string,
+    color: string
 }

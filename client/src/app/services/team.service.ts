@@ -8,7 +8,29 @@ export class TeamService {
 
   constructor() { }
 
-  teams: ITeam[] = [];
+  teams: ITeam[] = [
+    {
+      id: "1",
+      name: "Account Opening",
+      deptId: "1",
+      description: "Personal and non-personal account opening services",
+      color: "#92e0b0"
+    },
+    {
+      id: "2",
+      name: "Account Servicing",
+      deptId: "1",
+      description: "Personal and non-personal account opening services",
+      color: "#e0e092"
+    },
+    {
+      id: "3",
+      name: "Account Closing",
+      deptId: "1",
+      description: "Personal and non-personal account opening services",
+      color: "#e0b892"
+    }
+  ];
 
   addTeam (team: ITeam) {
     this.teams.push(team);

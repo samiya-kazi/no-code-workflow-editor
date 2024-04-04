@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './editor.component.css'
 })
 export class EditorComponent {
-
+  
 }

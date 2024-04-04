@@ -1,0 +1,20 @@
+<div class="container">
+    <nz-collapse>
+        <nz-collapse-panel *ngFor="let team of teams"
+            [nzHeader]="team.name"
+            [ngStyle]="{backgroundColor: team.color}"
+        >
+        </nz-collapse-panel>
+    </nz-collapse>
+    
+    <button nz-button [nzType]="'primary'" (click)="showModal()"><span>Add Team</span></button>
+    <nz-modal [(nzVisible)]="isVisible" nzTitle="Add Team" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" [nzOkDisabled]="!addTeamForm.valid">
+      <ng-container *nzModalContent>
+        <form [formGroup]="addTeamForm">
+            <input nz-input formControlName="name" placeholder="Team Name" />
+            <textarea nz-input formControlName="description" placeholder="Description"></textarea>
+            <input nz-input formControlName="color" type="color" />
+        </form>
+      </ng-container>
+    </nz-modal>
+</div>
