@@ -4,6 +4,8 @@ import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzButtonComponent } from 'ng-zorro-antd/button';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzColorPickerModule } from 'ng-zorro-antd/color-picker';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 
 @NgModule({
@@ -13,13 +15,17 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzCollapseModule,
     NzModalModule,
     NzButtonComponent,
-    NzInputModule
+    NzInputModule,
+    NzColorPickerModule,
+    NzIconModule
   ],
   exports: [
     NzCollapseModule,
     NzModalModule,
     NzButtonComponent,
-    NzInputModule
+    NzInputModule,
+    NzColorPickerModule,
+    NzIconModule
   ]
 })
 export class ZorroComponentsModule { }

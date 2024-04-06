@@ -1,0 +1,23 @@
+.step-card {
+  display: flex;
+  justify-content: space-around;
+  width: 25rem;
+  border: 1px solid grey;
+  align-items: center;
+}
+
+.step-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-weight: bold;
+}
+
+.step-info {
+  flex-grow: 1;
+}
+
+.step-access {
+
+}

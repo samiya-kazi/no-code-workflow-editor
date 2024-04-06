@@ -1,0 +1,14 @@
+.container {
+  width: 66dvw;
+  height: 100dvh;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.add-step-button {
+ cursor: pointer;
+ text-align: center
+}

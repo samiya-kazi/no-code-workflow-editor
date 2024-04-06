@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngIf="!steps">Select a workflow</div>
+  <div *ngIf="steps !== undefined && steps.length === 0">
+    <div>Start workflow steps</div>
+    <button nz-button (click)="addStep()">Start</button>
+  </div>
+
+  <div *ngIf="steps && steps.length">
+    <div *ngFor="let step of steps">
+      <app-workflow-step-card [step]="step"></app-workflow-step-card>
+      <div class="add-step-button" nz-icon nzType="plus-circle" nzTheme="twotone" (click)="addStep(step.step + 1)"></div>
+    </div>
+  </div>
+</div>

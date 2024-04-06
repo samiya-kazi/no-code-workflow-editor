@@ -1,0 +1,10 @@
+.workflow {
+  cursor: pointer;
+  padding: 10px;
+  /* border: 1px solid grey; */
+  margin: 5px 0;
+}
+
+.workflow:hover {
+  background-color: lightgray;
+}

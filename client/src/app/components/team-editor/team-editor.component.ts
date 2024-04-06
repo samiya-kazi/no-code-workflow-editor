@@ -19,7 +19,10 @@ export class TeamEditorComponent {
     color: new FormControl('', [Validators.required]),
   })
 
-  constructor (private teamService: TeamService, private fb: FormBuilder) {}
+  constructor (
+    private teamService: TeamService, 
+    private fb: FormBuilder
+  ) {}
 
   showModal () {
     this.isVisible = true;
@@ -31,7 +34,7 @@ export class TeamEditorComponent {
   
   handleOk () {
     this.isVisible = false;
-    const newTeam = {
+    const newTeam : ITeam = {
       id: Date.now().toString(),
       name: this.addTeamForm.value.name!,
       description: this.addTeamForm.value.description!,
@@ -40,6 +43,6 @@ export class TeamEditorComponent {
     }
 
     this.teamService.addTeam(newTeam);
-    console.log(this.teams)
+    this.addTeamForm.reset();
   }
 }

@@ -13,6 +13,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { EditorComponent } from './components/editor/editor.component';
 import { TeamEditorComponent } from './components/team-editor/team-editor.component';
 import { ZorroComponentsModule } from './modules/zorro-components/zorro-components.module';
+import { WorkflowCollapseComponent } from './components/workflow-collapse/workflow-collapse.component';
+import { EditAreaComponent } from './edit-area/edit-area.component';
+import { WorkflowStepCardComponent } from './components/workflow-step-card/workflow-step-card.component';
 
 registerLocaleData(en);
 
@@ -20,7 +23,10 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     EditorComponent,
-    TeamEditorComponent
+    TeamEditorComponent,
+    WorkflowCollapseComponent,
+    EditAreaComponent,
+    WorkflowStepCardComponent
   ],
   imports: [
     BrowserModule,

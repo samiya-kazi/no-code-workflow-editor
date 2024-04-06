@@ -1,0 +1,17 @@
+<nz-collapse>
+  <nz-collapse-panel
+      [nzHeader]="team.name"
+      [ngStyle]="{backgroundColor: team.color}"
+  >
+    <div class="workflow" *ngFor="let workflow of filterWorkflows(team)" (click)="handleWorkflowSelect(workflow)">{{workflow.name}}</div>
+    <button nz-button (click)="showModal()">Add Workflow</button>
+  </nz-collapse-panel>
+</nz-collapse>
+
+<nz-modal [(nzVisible)]="isVisible" [nzTitle]="'New workflow for ' + team.name" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" [nzOkDisabled]="!addWorkflowForm.valid">
+  <ng-container *nzModalContent>
+    <form [formGroup]="addWorkflowForm">
+        <input nz-input formControlName="name" placeholder="Workflow Name" />
+    </form>
+  </ng-container>
+</nz-modal>
