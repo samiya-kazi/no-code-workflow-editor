@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkflowService } from '../services/workflow.service';
-import { IWorkflowStep } from '../interfaces/workflow-step.interface';
+import { WorkflowService } from '../../services/workflow.service';
+import { IWorkflowStep } from '../../interfaces/workflow-step.interface';
 
 @Component({
   selector: 'app-edit-area',
@@ -26,10 +26,10 @@ export class EditAreaComponent implements OnInit {
 
       const newStep : IWorkflowStep = {
         workflowId: "1", //this.workflowService.selectedWorkflow.id,
-        name: 'New Step',
+        name: '',
         step: index + 1,
         role: 'unassigned',
-        description: 'Add description',
+        description: '',
         type: 'read',
       }
 

@@ -1,8 +1,20 @@
 <div class="step-card">
   <div class="step-count">{{step.step}}</div>
   <div class="step-info">
-    <h3>{{step.name}}</h3>
-    <p>{{step.description}}</p>
+    <input nz-input [(ngModel)]="step.name" placeholder="Step name" nzSize="large" [nzBorderless]="true" />
+    <input nz-input [(ngModel)]="step.description" placeholder="Description" [nzBorderless]="true" />
   </div>
-  <div class="step-access"></div>
+  <div class="step-access">
+
+    <nz-select [(ngModel)]="step.role" nzPlaceHolder="Role">
+      <nz-option nzValue="reviewer" nzLabel="Reviewer"></nz-option>
+      <nz-option nzValue="maker" nzLabel="Maker"></nz-option>
+      <nz-option nzValue="checker" nzLabel="Checker"></nz-option>
+    </nz-select>
+
+    <nz-select [(ngModel)]="step.type" nzPlaceHolder="Data Access">
+      <nz-option nzValue="read" nzLabel="Read"></nz-option>
+      <nz-option nzValue="read/write" nzLabel="Read/Write"></nz-option>
+    </nz-select>
+  </div>
 </div>
